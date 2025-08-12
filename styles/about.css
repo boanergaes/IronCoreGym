@@ -94,6 +94,7 @@ p.text {
 
 section.dashboard {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-image: url('../public/images/red-background.jpg');
     background-position: center;
@@ -153,15 +154,44 @@ section.gallery-container {
     align-items: center;
 }
 
+.gallery-container h1 {
+    margin-bottom: 2rem;
+}
+.gallery-container p {
+    padding-bottom: 1.4rem;
+    width: fit-content;
+    position: relative;
+}
+
 .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 2rem;
+    display: flex;
+    gap: 1.6rem;
+    padding: 1.6rem;
+    width: 100%;
+}
+
+.column {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }
 
 .gallery img {
     width: 100%;
-    height: auto;
-    border: 1px solid hsla(0, 0%, 50%, .4);
+    /* height: auto; */
+}
+
+@media screen and (max-width: 760px) {
+    .story {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10rem;
+    }
+    p.text {
+        width: 60vw;
+    }
+    .image img {
+        width: 70vw;
+    }
 }

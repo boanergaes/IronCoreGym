@@ -100,6 +100,14 @@ button:hover {
 
 /* ========== HEADER ============= */
 
+.menu {
+    display: none;
+}
+
+nav .cancel {
+    display: none;
+}
+
 header {
     display: flex;
     align-items: center;
