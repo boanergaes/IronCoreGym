@@ -95,7 +95,7 @@ p.text {
 section.dashboard {
     display: flex;
     justify-content: center;
-    background-image: url('/public/images/red-background.jpg');
+    background-image: url('../public/images/red-background.jpg');
     background-position: center;
     padding: 3.2rem 0;
     position: relative;
