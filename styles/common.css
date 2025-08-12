@@ -106,6 +106,9 @@ header {
     justify-content: space-between;
     padding: 1.3rem var(--section-side-padding);
     gap: 1.4rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo-container img.logo  {
