@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Agdasima:wght@400;700&family=Alata&family=Alfa+Slab+One&family=Anton&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Agdasima:wght@400;700&family=Alfa+Slab+One&family=Anton&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Agdasima:wght@400;700&family=Alata&family=Alfa+Slab+One&family=Anton&family=Catamaran:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --body-bg-color: hsl(0, 0%, 10%);
@@ -93,6 +95,7 @@ section.hero-section {
 .hero img {
     width: 31vw;
     min-width: 30rem;
+    max-width: 33rem;
     position: absolute;
     bottom: 0;
     right: -22px;
@@ -172,8 +175,10 @@ section.trainers-section {
 }
 
 .trainer-wrapper {
-    width: 100%;
+    width: 80%;
     display: flex;
+    padding-bottom: 6rem;
+    position: relative;
 }
 .trainer-wrapper.right {
     justify-content: right;
@@ -185,6 +190,13 @@ section.trainers-section {
 .trainer-card {
     display: flex;
     overflow: hidden;
+    position: relative;
+    width: 70%;
+    min-width: 600px;
+}
+.left .trainer-card {
+    justify-content: end;
+    text-align: end;
 }
 
 .trainer-text {
@@ -194,7 +206,160 @@ section.trainers-section {
     max-width: 30rem;
     padding: 3rem 1.6rem;
 }
+.left .trainer-text {
+    align-items: end;
+}
+
+.trainer-text h1 {
+    margin-bottom: 0;
+}
+.left h1 {
+    width: fit-content;
+}
+
+.trainer-text p {
+    display: flex;
+    gap: .8rem;
+}
+
+.trainer-text .quote {
+    display: block;
+    font-family: "Catamaran";
+    font-size: 3.6rem;
+    line-height: 0;
+    padding-top: 20px;
+}
+
+.trainer {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 4rem;
+    letter-spacing: 2px;
+    word-spacing:10px;
+}
+
+.trainer h3 {
+    font-weight: 400;
+}
+.working-yrs {
+    background-color: hsl(60, 98%, 48%);
+    color: black;
+    padding: 3px 8px;
+    border-radius: 8px;
+    word-spacing: 0;
+    letter-spacing: 0;
+}
 
 .trainer-card img {
+    position: absolute;
+    z-index: -1;
+    transition: all .8s ease-out;
+}
+.trainer-card:hover img {
+    opacity: .8;
+    scale: 1.08;
+}
+.right img {
+    right: 0;
+}
+.left img {
+    left: 0;
+}
+
+/* ------------ join-cta --------- */
+
+.join-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+/* -------------for floating balls -------------- */
+
+.first .b1 {
+    height: 130px;
+    width: 130px;
+    left: 0;
+    top: -30%;
+}
+.third .b2 {
+    height: 100px;
+    width: 100px;
+    bottom: 0;
+    left: 0;
+}
+
+/* ============= store cta section ========== */
+
+section.store-cta {
+    display: flex;
+    justify-content: center;
+    background-image: url("../public/images/dark-wallpaper.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 4rem 0;
+    margin: 3rem 0;
     position: relative;
+}
+
+.cta-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, .7);
+}
+
+.cta-card {
+    display: flex;
+    max-width: 740px;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.store-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .6rem;
+}
+
+.store-images img {
+    opacity: .7;
+    border-radius: 6px;
+    border: 1px solid hsla(0, 0%, 50%, .6);
+}
+
+.store-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    background-color: hsl(0, 0%,10%);
+    padding: .6rem 1.2rem;
+    border-radius: 8px;
+}
+
+.store-text h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+.store-text h1::before {
+    display: none;
+}
+
+.store-text p {
+    color: hsl(0, 0%, 80%);
+    font-size: .9rem;
+}
+
+.store-text a {
+    width: 100%;
+}
+.store-text button {
+    width: 96%;
 }
