@@ -134,6 +134,7 @@ section.dashboard {
     background-image: linear-gradient(40deg, hsla(0, 0%, 50%, .4), transparent);
     backdrop-filter: blur(5px);
     margin-right: -1.6rem;
+    margin-top: -1.6rem;
     transition: scale .5s ease;
 }
 .dash-card:hover {
@@ -185,13 +186,44 @@ section.gallery-container {
 @media screen and (max-width: 760px) {
     .story {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 10rem;
+        gap: 7rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
+
+    .image {
+        grid-row: 1;
+    }
+
     p.text {
         width: 60vw;
     }
     .image img {
         width: 70vw;
     }
+}
+
+@media screen and (width < 500px) {
+
+    /* ======= dashboard ========= */
+
+    section.dashboard {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-top: 8rem;
+    }
+
+    /* ======== gallery ========= */
+
+    .gallery {
+        padding: .6rem;
+        gap: .6rem;
+    }
+
+    .column {
+        gap: .6rem;
+    }
+    
 }
