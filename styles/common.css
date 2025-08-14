@@ -9,13 +9,25 @@
     --main-para-font-family: "Instrument Sans", sans-serif;
     --main-header-font-family: "Work Sans", sans-serif;
     /* --section-side-padding: 10rem; */
-     --body-bg-color: hsl(0, 0%, 10%);
-    --main-font-color: white;
     --darker-red-font-color: hsl(0, 100%, 43%);
     --lighter-red-font-color: hsl(0, 100%, 44%);
-    --main-para-font-family: "Instrument Sans", sans-serif;
-    --main-header-font-family: "Work Sans", sans-serif;
     --section-side-padding: min(4%, 8rem);
+    --border-color: hsla(0, 0%, 70%, .3);
+    --border-color-lighter: hsla(0, 0%, 60%, .2);
+    --font-color-dim: hsl(0, 0%, 70%);
+    --stat-board-bg: hsl(0, 0%, 15%);
+}
+
+.light {
+    --body-bg-color: hsl(0, 0%, 96%);
+    --main-font-color: black;
+    --red-font-color: hsl(0, 100%, 56%);
+    --darker-red-font-color: hsl(0, 100%, 43%);
+    --lighter-red-font-color: hsl(0, 100%, 44%);
+    --border-color: hsla(0, 0%, 70%, .3);
+    --border-color-lighter: hsla(0, 0%, 60%, .2);
+    --font-color-dim: hsl(0, 0%, 20%);
+    --stat-board-bg: hsl(0, 0%, 75%);
 }
 
 * {
@@ -82,7 +94,6 @@ h1::before {
     width: 100px;
     height: 3px;
     border-radius: 8px;
-    box-shadow: 0 0 14px red;
     margin-left: 10px;
 }
 
@@ -100,7 +111,7 @@ button {
 }
 button:hover {
     background-color: hsl(0, 100%, 40%);
-    color: black;
+    color: white;
     border-color: hsla(0, 0%, 70%, .7);
 }
 
@@ -129,6 +140,17 @@ header {
     overflow: hidden;
 }
 
+.lightmode {
+    display: none;
+}
+
+.light .darkmode {
+    display: none;
+}
+.light .lightmode {
+    display: block;
+}
+
 .logo-container img.logo  {
     width: 12rem;
     height: auto;
@@ -139,6 +161,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: #382222;
+    color: white;
     padding: 11px 34px;
     border: 1px solid #C00000;
     border-radius: 2.8rem;
@@ -181,7 +204,7 @@ nav.narrow * {
 nav a {
     display: block;
     padding: 6px;
-    color: var(--main-font-color);
+    color: white;
     text-decoration: none;
 }
 
@@ -201,7 +224,7 @@ header svg:hover, header nav .theme {
 /* ============ footer ============ */
 
 footer {
-    border-top: 1px solid hsla(0, 0%, 70%, .3);
+    border-top: 1px solid var(--border-color);
     padding: 0 var(--section-side-padding);
     margin-top: 12rem;
 }
@@ -212,7 +235,7 @@ footer {
     align-items: center;
     gap: 1rem;
     padding: 1.6rem 0;
-    border-bottom: 1px solid hsla(0, 0%, 60%, .2);
+    border-bottom: 1px solid var(--border-color-lighter);
 }
 
 .follow-us {
@@ -232,7 +255,7 @@ footer {
     gap: 1rem;
     padding: 1.6rem 0;
     padding-right: 5rem;
-    color: hsl(0, 0%, 70%);
+    color: var(--font-color-dim);
 }
 
 .about-company ul {
@@ -243,7 +266,7 @@ footer {
 }
 
 .about-company a {
-    color: hsl(0, 0%, 70%);
+    color: var(--font-color-dim);
     text-decoration: none;
 }
 
@@ -261,7 +284,7 @@ footer {
 }
 
 footer p {
-    color: hsl(0, 0%, 70%);
+    color: var(--font-color-dim);
     text-align: center;
     padding-bottom: 1.5rem;
     padding-top: 2rem;

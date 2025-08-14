@@ -1,3 +1,4 @@
+const body = document.body;
 const menuButton = document.querySelector('.menu');
 const navBar = document.querySelector('nav');
 const cancelButton = document.querySelector('.cancel');
@@ -26,4 +27,33 @@ cancelButton.addEventListener('click', () => {
     navBar.classList.remove('narrow');
     themeRemover(themeButton, navBar);
     console.log('cancel called');
+})
+
+// theme toggling
+
+// const headerLogo {
+//     light: ''
+
+// }
+
+const theme = localStorage.getItem('theme');
+if (theme === null) {
+    localStorage.setItem('theme', 'dark');
+} else if (theme === 'light') {
+    body.classList.add('light');
+}
+
+function applyTheme() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        localStorage.setItem('theme', 'light');
+        body.classList.add('light');
+    } else {
+        localStorage.setItem('theme', 'dark');
+        body.classList.remove('light');
+    }
+}
+
+themeButton.addEventListener('click', () => {
+    applyTheme();
 })
