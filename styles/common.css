@@ -16,6 +16,7 @@
     --border-color-lighter: hsla(0, 0%, 60%, .2);
     --font-color-dim: hsl(0, 0%, 70%);
     --stat-board-bg: hsl(0, 0%, 15%);
+    --balck-ball-light-side: hsl(0, 0%, 24%);
 }
 
 .light {
@@ -24,10 +25,11 @@
     --red-font-color: hsl(0, 100%, 56%);
     --darker-red-font-color: hsl(0, 100%, 43%);
     --lighter-red-font-color: hsl(0, 100%, 44%);
-    --border-color: hsla(0, 0%, 70%, .3);
-    --border-color-lighter: hsla(0, 0%, 60%, .2);
+    --border-color: hsla(0, 0%, 30%, .4);
+    --border-color-lighter: hsla(0, 0%, 40%, .3);
     --font-color-dim: hsl(0, 0%, 20%);
     --stat-board-bg: hsl(0, 0%, 75%);
+    --balck-ball-light-side: hsl(0, 0%, 44%);
 }
 
 * {
@@ -63,7 +65,7 @@ body {
     background-image: linear-gradient(70deg, hsl(0, 100%, 15%) 36%, hsl(0, 100%, 50%));
 }
 .ball.black {
-    background-image: linear-gradient(70deg, black 36%, hsl(0, 0%, 24%));
+    background-image: linear-gradient(70deg, black 36%, var(--balck-ball-light-side));
 }
 
 /* -------------- */
