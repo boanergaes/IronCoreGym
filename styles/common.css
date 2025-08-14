@@ -357,29 +357,30 @@ footer p {
         column-gap: 1rem;
         padding-right: 0;
     }
+}
 
-    @media screen and (width < 500px) {
+@media screen and (width < 500px) {
+    body {
+        font-size: 1rem;
+    }
 
-        body {
-            font-size: 1rem;
-        }
+    button {
+        font-size: 1rem;
+    }
 
-        button {
-            font-size: 1rem;
-        }
+    /* ========= header ======== */
 
-        /* ======== footer ======= */
+    .logo-container img.logo  {
+        width: 10rem;
+    }
 
-        footer {
-            margin-top: 6rem;
-        }
+    /* ======== footer ======= */
 
-        .about-company {
-            grid-template-columns: 1fr;
-        }
+    footer {
+        margin-top: 6rem;
+    }
 
-        /* .with-icon {
-            margin: -3rem 0;
-        } */
+    .about-company {
+        grid-template-columns: 1fr;
     }
 }
