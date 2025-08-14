@@ -146,6 +146,10 @@ nav {
     height: 57.2px;
 }
 
+.narrow-top {
+    display: none;
+}
+
 nav.narrow {
     display: flex;
     flex-direction: column;
